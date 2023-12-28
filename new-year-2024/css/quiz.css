@@ -65,6 +65,7 @@ body {
 }
 
 .song {
+    background-color: rgb(54, 56, 174);
     padding: 60px;
     display: none;
     flex-direction: column;
@@ -78,6 +79,7 @@ body {
 }
 
 #play-pause {
+    background-color: purple;
     z-index: 2;
     margin-top: 30px;
     text-align: center;
