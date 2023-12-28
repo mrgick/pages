@@ -84,6 +84,18 @@ const set_song = (question) => {
     }
 }
 
+const set_settings = () => {
+    let _list = document.getElementsByClassName("control")[0].children
+    for (let index = 0; index < _list.length; index++) {
+        _list[index].style["border"] = "2px solid white"
+        _list[index].style["text-align"] = "center"
+
+    }
+    _list[0].innerHTML = "Меню"
+    _list[1].innerHTML = "Ответ"
+    _list[2].innerHTML = "Предыдущий"
+    _list[3].innerHTML = "Следующий"
+}
 
 window.onload = () => {
     let params = new URLSearchParams(document.location.search);
@@ -95,6 +107,8 @@ window.onload = () => {
         set_song(question)
     } else if (quiz_type == "multfilm") {
 
+    } else {
+        set_settings()
     }
 
     document.getElementById("control-menu").onclick = (e) => {
