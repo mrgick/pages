@@ -1,0 +1,47 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: blueviolet;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 5em;
+}
+
+
+a {
+    font-size: 80px;
+    color: white;
+    text-decoration: none;
+    background-color: purple;
+    padding: 30px;
+    width: 600px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 5px solid white;
+    border-radius: 25px;
+    box-shadow: 0px 10px 10px rgba(255, 255, 255, 0.2), 10px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+a:first-child {
+    background-color: rgb(158, 78, 22);
+}
+
+a:last-child {
+    background-color: brown;
+}
+
+a:visited {
+    text-decoration: none;
+}
