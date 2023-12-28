@@ -4,9 +4,9 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="reset.css">
-    <link rel="stylesheet" type="text/css" href="quiz.css">
-    <script defer src="quiz.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/quiz.css">
+    <script defer src="js/quiz.js"></script>
 </head>
 
 <body>
@@ -22,8 +22,28 @@
     </div>
     <div class="wrapper">
         <div class="quiz">
-            <div id="question">1. </div>
-            <div id="answer"></div>
+            <div id="quiz-question">1. </div>
+            <div id="quiz-answer"></div>
+        </div>
+        <div class="song">
+            <div id="song-answer">
+                Откуда отрывок песни?
+            </div>
+            <div id="play-pause">
+                ⏯
+            </div>
+            <audio id="music-player">
+                <source src="songs/1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        <div class="multfilm">
+            <div>
+                Тут картинка вопроса
+            </div>
+            <div>
+                Тут ответ
+            </div>
         </div>
     </div>
 </body>
