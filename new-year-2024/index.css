@@ -13,18 +13,18 @@ body {
 .wrapper {
     display: grid;
     grid-template-columns: auto auto;
-    gap: 5em;
+    gap: 4em;
 }
 
 
 a {
-    font-size: 80px;
+    font-size: 120px;
     color: white;
     text-decoration: none;
     background-color: purple;
     padding: 30px;
-    width: 600px;
-    height: 300px;
+    width: 800px;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
