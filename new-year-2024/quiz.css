@@ -6,7 +6,7 @@ body {
 body {
     background-color: blueviolet;
     color: white;
-    font-size: 80px;
+    font-size: 110px;
 }
 
 .control {
@@ -31,9 +31,9 @@ body {
 
 .quiz {
     display: flex;
-    gap: 2em;
+    gap: 1em;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
 }
 
 #question {
