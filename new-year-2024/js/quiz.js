@@ -43,7 +43,17 @@ const QUIZ_QUESTIONS = [
 ]
 
 const SONG_QUESTIONS = [
-    ["1.mp3", "Морозко"]
+    ["1.mp3", "Три белых коня (Чародеи)"],
+    ["2.mp3", "Песня про зайцев (Бриллиантовая рука)"],
+    ["3.mp3", "Песенка про медведей (Кавказская пленница)"],
+    ["4.mp3", "Остров невезения (Бриллиантовая рука)"],
+    ["5.mp3", "Разговор со счастьем (Иван Васильевич меняет профессию)"],
+    ["6.mp3", "Ой, мороз, мороз, не морозь меня! (Морозко)"],
+    ["7.mp3", "Кабы не было зимы? (Зима в Простоквашино)"],
+    ["8.mp3", "Пять минут (Карнавальная ночь)"],
+    ["9.mp3", "Звенит январская вьюга (Иван Васильевич меняет профессию)"],
+    ["10.mp3", "Голубой вагон (Чебурашка)"]
+
 ]
 
 const set_quiz = (question) => {
@@ -69,6 +79,7 @@ const set_quiz = (question) => {
 const set_song = (question) => {
     document.getElementsByClassName("song")[0].style["display"] = "flex"
     document.getElementById("song-answer").innerHTML = (question + 1).toString() + ". Откуда отрывок песни?"
+    document.getElementById("music-player").src = `songs/${SONG_QUESTIONS[question][0]}`
     document.getElementById("control-answer").onclick = (e) => {
         if (document.getElementById("music-player").currentTime != 0.0) {
             document.getElementById("song-answer").innerHTML = "Ответ: " + SONG_QUESTIONS[question][1]
@@ -80,6 +91,14 @@ const set_song = (question) => {
             player.play()
         } else {
             player.pause()
+        }
+    }
+
+    document.getElementById("control-next").onclick = (e) => {
+        if (question + 1 < SONG_QUESTIONS.length) {
+            window.location = `quiz.html?quiz_type=song&question=${question + 1}`
+        } else {
+            window.location = 'index.html'
         }
     }
 }
